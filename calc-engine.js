@@ -72,18 +72,21 @@ document.addEventListener("keydown", function (event) {
         var expression = operand1;
       } else {
         var expression = eval(operand1 + " " + operator + " " + operand2);
-        screen.value = expression;
+        screen.value = expression.toFixed(4);
       }
     }
   } else if (value.v == "C" || value.v == "c") {
     screen.value = "0";
+    operand1 = 0;
+    operand2 = 0;
+    operator = null;
   } else if (value.v == "+/-") {
     var exp = parseFloat(screen.value);
     exp *= -1;
-    screen.value = exp;
+    screen.value = exp.toFixed(4);
   } else if (value.v == "%") {
     // var num=parseFloat
-    screen.value = eval(screen.value + " " + "/ 100");
+    screen.value = eval(screen.value + " " + "/ 100").toFixed(5);
   } else if (event.key == "Backspace") {
     // console.log("deb");
     var str = screen.value;
@@ -96,7 +99,11 @@ document.addEventListener("keydown", function (event) {
     }
   } else if ((value.v >= 0 && value.v <= 9) || value.v == ".") {
     // console.log(value.v);
-    if (screen.value != "0" && screen.value != error) screen.value += value.v;
+    if (
+      (screen.value != "0" && screen.value != error) ||
+      (screen.value == 0 && value.v == ".")
+    )
+      screen.value += value.v;
     else screen.value = value.v;
   }
 });
