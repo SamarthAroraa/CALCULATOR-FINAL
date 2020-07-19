@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SamarthAroraa/CALCULATOR-FINAL/issues"
   },
-  "homepage": "https://github.com/SamarthAroraa/CALCULATOR-FINAL#readme"
+  "homepage": "https://github.com/SamarthAroraa/CALCULATOR-FINAL#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
