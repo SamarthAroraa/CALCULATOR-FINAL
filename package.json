@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calc-engine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamarthAroraa/CALCULATOR-FINAL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamarthAroraa/CALCULATOR-FINAL/issues"
+  },
+  "homepage": "https://github.com/SamarthAroraa/CALCULATOR-FINAL#readme"
+}
